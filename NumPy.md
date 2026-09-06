@@ -70,7 +70,7 @@ numbers ** 2
 
 ### 5. Statistical Functions
 
-I learned useful NumPy functions for analyzing numerical data:
+I learned useful NumPy functions for analysing numerical data:
 
 ```python
 np.mean()
@@ -96,31 +96,6 @@ Example:
 
 ```python
 np.arange(0, 10, 2)
-```
-
-## 💻 Practice
-
-For today's practice, I created a dataset containing marks for students and used NumPy to calculate:
-
-* Mean
-* Median
-* Minimum
-* Maximum
-* Standard deviation
-
-I also created a **2D Student × Subject array** and calculated averages for students and subjects.
-
-## 🎯 Key Takeaway
-
-Today I understood that **NumPy is more than just a way to store numbers**. Its array-based operations make it easier to perform numerical calculations and work with datasets.
-
-This provides an important foundation for the next steps in my **AI/ML learning journey**, especially when working with libraries such as Pandas and Machine Learning frameworks.
-
-📌 **Day 2 Deliverable:**
-
-```text
-day-02-numpy/
-└── numpy_basics.ipynb
 ```
 
 #AI #MachineLearning #NumPy #Python #DataScience #AIJourney #MLJourney #LearningAI #PythonProgramming
