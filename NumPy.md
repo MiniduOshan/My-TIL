@@ -1,4 +1,4 @@
-# 📅 TIL — NumPy
+# 📅 NumPy
 
 **Date:** September 6, 2026
 
