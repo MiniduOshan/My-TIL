@@ -38,11 +38,11 @@ It is responsible for:
 * Users
 * Computers
 * Groups
-* Organizational Units (OUs)
+* Organisational Units (OUs)
 
-### 4. Organizational Unit (OU)
+### 4. Organisational Unit (OU)
 
-An **OU** is used to organize users and computers inside a domain.
+An **OU** is used to organise users and computers inside a domain.
 
 Example:
 
@@ -169,16 +169,16 @@ whoami
 
 ## Key Takeaways
 
-* **Active Directory** provides centralized management of Windows environments.
+* **Active Directory** provides centralised management of Windows environments.
 * **Domain Controllers** manage authentication and domain services.
 * **DNS is essential** for Active Directory.
-* **OUs** help organize users and computers.
+* **OUs** help organise users and computers.
 * **Groups** simplify permission management.
-* **Group Policy** allows centralized configuration and security management.
+* **Group Policy** allows centralised configuration and security management.
 
-## What I Practiced
+## What I Practised
 
-Today I practiced working with a Windows Server Active Directory environment by:
+Today I practised working with a Windows Server Active Directory environment by:
 
 * Creating an Active Directory domain
 * Configuring DNS
