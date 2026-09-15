@@ -192,4 +192,4 @@ Today I practised working with a Windows Server Active Directory environment by:
 
 ### TIL Summary
 
-> **Active Directory + DNS + Domain Controller** work together to provide centralized identity, authentication, and resource management in a Windows network.
+> **Active Directory + DNS + Domain Controller** work together to provide centralised identity, authentication, and resource management in a Windows network.
