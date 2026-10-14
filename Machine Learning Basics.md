@@ -44,7 +44,7 @@ Unsupervised Learning is a type of Machine Learning where a model learns pattern
 
 Reinforcement Learning is a type of Machine Learning where an **agent learns by interacting with an environment** and receiving rewards or penalties.
 
-The goal is to learn actions that maximize the total reward over time.
+The goal is to learn actions that maximise the total reward over time.
 
 **Example:** Training a robot to navigate a room. It receives rewards for reaching its destination and penalties for undesirable actions.
 
@@ -52,7 +52,7 @@ The goal is to learn actions that maximize the total reward over time.
 - Robotics
 - Game-playing AI
 - Autonomous systems
-- Resource optimization
+- Resource optimisation
 
 **Key concepts:**
 - **Agent:** The learner or decision-maker.
