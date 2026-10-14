@@ -77,14 +77,4 @@ The goal is to learn actions that maximise the total reward over time.
 - Reinforcement Learning learns through actions and rewards.
 
 Each approach solves different problems, and the best choice depends on the data available and the objective.
-
-## 🚀 Next Steps
-
-- Learn Python fundamentals.
-- Practice with NumPy and Pandas.
-- Explore Scikit-learn.
-- Build a simple project using each learning approach.
-
----
-
 *Day 1 of my Machine Learning learning journey. Learning the fundamentals one concept at a time!*
