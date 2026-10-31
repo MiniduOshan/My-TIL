@@ -36,9 +36,3 @@ Today I learned about **Cisco Packet Tracer**, a network simulation tool used to
 - **IP Address:** Identifies a device on a network.
 - **Subnet Mask:** Defines the network and host portions of an IP address.
 - **Default Gateway:** Allows devices to communicate with other networks.
-
-### Practical Learning
-
-Practised building small network topologies, configuring network devices, assigning IP addresses, and testing connectivity between devices using Cisco Packet Tracer.
-
-**Goal:** Understand networking fundamentals through hands-on simulation.
