@@ -1,24 +1,99 @@
-📘 **TIL – NTP (Network Time Protocol) & Active Directory**
+📘 **TIL – Network Time Protocol (NTP) and Active Directory Time Synchronization**
 
 📅 02 November 2026
 
-Today I learned about **NTP (Network Time Protocol)** and its importance in Windows Server environments, especially when working with **Active Directory (AD)**.
+Today I learned about **NTP (Network Time Protocol)** and how it plays an important role in synchronizing time across computers, servers, and network devices, especially in a Windows Server environment using Active Directory (AD).
 
-### Key points I learned:
+### 1. What is NTP?
 
-- **NTP:** A protocol used to synchronise system clocks across computers and network devices.
-- **UDP Port 123:** NTP uses UDP port 123 for time synchronisation.
-- **Time Synchronisation:** Ensures all devices maintain accurate and consistent time.
-- **Stratum Levels:** Represent the hierarchy of time sources.
+NTP is a networking protocol used to synchronize the date and time of devices over a network.
 
-### NTP & Active Directory
+Why is it important?
+- Maintains consistent time across network devices.
+- Ensures accurate timestamps in system logs.
+- Supports authentication mechanisms.
+- Helps with troubleshooting and security monitoring.
+- Prevents time-related issues in distributed systems.
 
-- **Kerberos Authentication:** Active Directory uses Kerberos, which relies on time synchronisation between clients and domain controllers.
-- **Time Difference:** Significant clock differences can cause Kerberos authentication failures. The default maximum tolerance in Windows domains is typically 5 minutes.
-- **Domain Controller:** Domain controllers participate in the domain time hierarchy.
-- **PDC Emulator:** The PDC Emulator in the forest root domain usually acts as the primary time source for the domain hierarchy.
-- **Windows Time Service (W32Time):** Windows uses this service to synchronize system clocks.
+**Technical details:**
+- Protocol: UDP
+- Port: 123
+- Architecture: Client-server
+- Time hierarchy: Stratum levels
 
-💡 **Important takeaway:** Proper time synchronisation is essential for Active Directory authentication, security, event logs, and reliable communication between domain-joined computers.
+### 2. Understanding Stratum Levels
 
-#TIL #NTP #ActiveDirectory #WindowsServer #Kerberos #Networking #SystemAdministration #Learning
+NTP uses stratum levels to describe the distance from a reference clock.
+
+- **Stratum 0:** Highly accurate reference clocks, such as atomic clocks and GPS clocks.
+- **Stratum 1:** Servers directly connected to Stratum 0 devices.
+- **Stratum 2:** Servers synchronized with Stratum 1 servers.
+- **Stratum 3:** Servers synchronized with Stratum 2 servers.
+
+Each level represents another step away from the original reference clock.
+
+### 3. NTP in Active Directory (AD)
+
+One interesting thing I learned is that time synchronization is critical in Active Directory environments.
+
+Active Directory uses **Kerberos authentication**, which depends on synchronized clocks between domain-joined computers and domain controllers.
+
+For example:
+- A user tries to log in to a domain computer.
+- The computer communicates with a Domain Controller.
+- Kerberos verifies authentication using time-sensitive tickets.
+- If the time difference is too large, authentication may fail.
+
+Windows domains typically allow a maximum time difference of 5 minutes (300 seconds) by default.
+
+### 4. Active Directory Time Hierarchy
+
+Windows Active Directory follows a hierarchical time synchronization structure.
+
+- **PDC Emulator:** The PDC Emulator in the forest root domain is normally configured to synchronize with an external, reliable NTP time source.
+- **Other Domain Controllers:** Synchronize time through the domain hierarchy.
+- **Domain-Joined Computers:** Synchronize time with their domain controllers.
+- **Domain Members:** Automatically follow the Windows domain time hierarchy.
+
+This helps maintain consistent time throughout the entire domain environment.
+
+### 5. Windows Time Service (W32Time)
+
+Windows uses the Windows Time Service (W32Time) to manage time synchronization.
+
+Useful commands I learned:
+
+Check current time synchronization status:
+`w32tm /query /status`
+
+Check configured time source:
+`w32tm /query /source`
+
+Display time configuration:
+`w32tm /query /configuration`
+
+Check time synchronization peers:
+`w32tm /query /peers`
+
+Force time synchronization:
+`w32tm /resync`
+
+Restart Windows Time Service:
+`net stop w32time`
+`net start w32time`
+
+### 6. Why Time Synchronization Matters in AD
+
+- **Kerberos Authentication:** Prevents authentication failures caused by clock differences.
+- **Group Policy:** Helps maintain consistent event timestamps and policy-related operations.
+- **Event Logs:** Makes it easier to correlate events across multiple servers and computers.
+- **Security:** Accurate timestamps are important for auditing and investigating security incidents.
+- **Distributed Systems:** Ensures different systems operate with consistent time references.
+
+### Key Takeaway
+
+NTP is not just about displaying the correct time on a computer. In an Active Directory environment, proper time synchronization is an important part of authentication, security, and domain infrastructure.
+
+Understanding how NTP, Windows Time Service, Domain Controllers, PDC Emulator, and Kerberos work together is an important part of learning Windows Server and System Administration.
+
+#TIL #NTP #ActiveDirectory #WindowsServer #Kerberos #Networking #SystemAdministration #CyberSecurity #ITInfrastructure #Learning
