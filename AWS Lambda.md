@@ -1,5 +1,8 @@
 # AWS Lambda – Serverless Computing
 
+**Date:** 04 November 2026
+**Category:** Cloud Computing / AWS
+
 A learning guide to understanding **AWS Lambda**, a serverless compute service provided by Amazon Web Services (AWS).
 
 ## 1. What is AWS Lambda?
